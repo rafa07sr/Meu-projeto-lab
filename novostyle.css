@@ -1,0 +1,559 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --laranja: #f6c34a;
+}
+
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+.menus {
+    display: flex;
+    gap: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+
+}
+
+
+
+.menus a {
+
+    display: flex;
+    color: black;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.menus a::after {
+    content: " ";
+    width: 0%;
+    height: 7px;
+    bottom: 0;
+    background-color: lightseagreen;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.menus a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.descubra {
+
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4vh;
+
+
+}
+
+.aprenda {
+    padding: 2vh;
+    text-align: center;
+    font-size: 25px;
+
+
+
+
+
+}
+
+.bloco1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("assets/background-hero.png");
+    background-color: var(--laranja);
+    padding: 20vh
+}
+
+.whats {
+    position: absolute;
+    bottom: 35vh;
+    left: 92vw;
+
+}
+
+.whats img {
+    width: 60px;
+    height: 60px;
+}
+
+.linkcursos {
+    text-align: center;
+    background-color: black;
+    padding: 10px 50px;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+.linkcursos:hover {
+    background-color: grey;
+    color: white;
+}
+
+.ancora {
+    color: white;
+    text-decoration: none;
+}
+
+.bloco2 {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 10vh;
+}
+
+.sobre-p {
+    text-align: justify;
+    margin-right: 10vw;
+    margin-left: 10vw;
+
+    line-height: 1.7;
+
+}
+
+.sobre {
+    padding-top: 10vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.sobre-p {
+    padding-top: 5vh;
+    font-family: 'Open Sans';
+    line-height: 2;
+}
+
+.bloco3 {
+    display: grid;
+    background-color: black;
+    grid-gap: 30px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    grid-template-columns: 4, 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+
+
+}
+
+.depoimentos {
+    display: grid;
+    padding-top: 150px;
+    padding-bottom: 70px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    justify-content: center;
+
+
+
+
+}
+
+
+.card1 {
+
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+
+.card2 {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    grid-column: 2/3;
+}
+
+.card3 {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    grid-column: 3/4;
+}
+
+.card4 {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    width: 200px;
+    grid-column: 4/5;
+}
+
+footer {
+    display: flex;
+    background-color: var(--laranja);
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+.logotipo {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.mapa {
+    margin-bottom: 15px;
+
+}
+
+.endereco {
+    font-size: x-large;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+
+}
+
+.links2 {
+    padding-top: 60px;
+}
+
+.link {
+    margin-bottom: 30px;
+    font-family: 'Poppins';
+}
+
+.links2 ul {
+    line-height: 2rem;
+    list-style-type: none;
+    font-family: 'Open Sans';
+}
+
+.sociais {
+    padding-top: 60px;
+    font-family: 'Poppins';
+}
+
+.redes {
+    padding-bottom: 30px;
+
+}
+
+.links3 {
+    padding: 60px;
+}
+
+.area {
+    line-height: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins';
+}
+
+.links3 ul {
+    list-style-type: none;
+    line-height: 2;
+    font-family: 'Open Sans';
+}
+
+.rua {
+    font-family: 'Open Sans';
+}
+
+
+/*---------------------------------------------------*/
+/* tela de cursos */
+
+
+
+.menu-cursos {
+    display: grid;
+    background-color: var(--laranja);
+    grid-gap: 100px;
+    padding: 10vh;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 3, 1fr;
+    grid-template-rows: 2, 1fr;
+    align-items: center;
+    
+}
+
+.html h1 {
+    font-family: 'Poppins';
+
+}
+
+.html p {
+    font-family: 'Open Sans';
+}
+
+.java h1 {
+    font-family: 'Poppins';
+}
+
+.java p {
+    font-family: 'Open Sans';
+}
+
+.apis h1 {
+    font-family: 'Poppins';
+}
+
+.apis p {
+    font-family: 'Open Sans';
+}
+
+.html {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row:1/2;
+    width: 200px;
+}
+
+.java {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 200px;
+
+}
+
+.apis {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    grid-column: 3/4;
+    grid-row:1/2;
+    width: 200px;
+}
+
+.quero {
+    
+    background-color: var(--laranja);
+    text-align: center;
+   
+    color: white;
+    font-family: 'Poppins';
+    grid-column: 1/4;
+    grid-row: 2/3;
+
+
+}
+
+.link-quero {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
+    text-decoration: none;
+}
+
+.link-quero:hover {
+    background-color: gray;
+
+}
+
+.bloco-2 {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    padding-bottom: 8vh;
+    justify-content: center;
+    padding-top: 10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.html-1 {
+
+    display: flex;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 10px;
+    gap: 10vw;
+    padding: 10px;
+    padding-left: 5vw;
+    padding-right: 5vh;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.html-1 h1 {
+    font-family: 'Poppins';
+}
+
+.html-1 h3 {
+    font-family: 'Poppins';
+}
+
+.html-1 p {
+    font-family: 'Open Sans';
+}
+
+
+
+.java-1 {
+    display: flex;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 10px;
+    gap: 10vw;
+    padding: 10px;
+    padding-left: 5vw;
+    padding-right: 5vh;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.java-1 h1 {
+    font-family: 'Poppins';
+}
+
+.java-1 h3 {
+    font-family: 'Poppins';
+    ;
+}
+
+.java-1 p {
+    font-family: 'Open Sans';
+}
+
+
+.apis-1 {
+    display: flex;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 10px;
+    gap: 10vw;
+    padding: 10px;
+    padding-left: 6vw;
+    padding-right: 5.6vh;
+    align-items: center;
+
+}
+
+.apis-1 h1 {
+    font-family: 'Poppins';
+}
+
+.apis-1 h3 {
+    font-family: 'Poppins';
+}
+
+.apis-1 p {
+    font-family: 'Open Sans';
+}
+
+.whats-c {
+    position: absolute;
+    bottom: 35vh;
+    left: 92vw;
+    
+}
+
+.whats-c img {
+    width: 60px;
+    height: 60px;
+
+}
+
+/*----------------------------------------------*/
+
+.cadastros {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: black;
+    align-items: center;
+    text-align: center;
+
+}
+
+.fale {
+    text-align: left;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+form h1 {
+    text-align: center;
+    font-family: 'Poppins';
+    margin-bottom: 10px;
+
+}
+
+.label {
+    font-family: 'Poppins';
+}
+
+.inputs {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0.5vh 7vw;
+
+}
+
+#mensagem {
+    border-radius: 5px;
+    padding: 6vh 7.2vw;
+}
+
+.botao {
+    text-align: center;
+    padding-top: 2vw;
+    margin-bottom: 10px;
+}
+
+.botao-s {
+    background-color: var(--laranja);
+    border: none;
+    padding: 1vh;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
