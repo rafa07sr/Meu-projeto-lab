@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adm</title>
+    <title>Matrículas</title>
     <script src="./projeto_web_resisado.js" defer ></script>
     <link rel="stylesheet" href="novostyle.css">
 </head>
@@ -40,24 +40,40 @@
                 </div>
             </section>
 
-            <section id="blocos-full">
+            <section class="container2">
+
+                <div class="formulario">
                 
-                <div class="busca">
-                    <input id="inputTurma"  type="text" placeholder="Digite o nome da turma">
+                    <div  class="m-nome">
+                        <h2>Matrículas</h2>
+                        <label>Nome</label>
+                        <input id="input-nome" type="text">
+                    </div>
 
-                    <button class="botaozinho" id="buscar" onclick="buscarTurma()">Buscar</button>
+                    <div class="m-cursos">
+                    <label >Curso</label>
+                        <input id="input-curso" type="text">
+                    </div>
+
+                    <div class="m-turmas" >
+                        <label >Turma</label>
+                        <input id="input-turma" type="text">
+                    </div>
+
+                    <div class="m-parcelas">
+                        <label >Número de parcelas</label>
+                        <input id="input-parcelas" type="text">
+                    </div>
+
+                    <div class="m-button">
+                        <button id="botao-matricular" onclick="btnMatricutar()">Matricular aluno</button>
+                    </div>
                 </div>
-                <section  id="meu-container">
-
+                <section class="aluno-matriculado">
+                
                 </section>
-               
-               
-
             </section>
-
-
         </div>
-
         <footer>
             <div class="logo-mapa-rua">
                 <div class="logotipo">
@@ -131,6 +147,3 @@
             </div>
         </footer>
     </main>
-</body>
-
-</html>

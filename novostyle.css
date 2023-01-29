@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 9vh;
+    border-bottom: 2px solid lightseagreen;
 
 }
 
@@ -31,6 +33,10 @@
 
 }
 
+.menus a:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
 
 
 .menus a {
@@ -39,13 +45,14 @@
     color: black;
     text-decoration: none;
     position: relative;
-
 }
+
+
 
 .menus a::after {
     content: " ";
     width: 0%;
-    height: 7px;
+    height: 2px;
     bottom: 0;
     background-color: lightseagreen;
     position: absolute;
@@ -55,12 +62,6 @@
 .menus a:hover::after {
     width: 100%;
 }
-
-
-
-
-
-
 
 
 .descubra {
@@ -76,35 +77,45 @@
     padding: 2vh;
     text-align: center;
     font-size: 25px;
-
-
-
-
-
+    font-family: 'Open Sans';
 }
 
 .bloco1 {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url("assets/background-hero.png");
     background-color: var(--laranja);
-    padding: 20vh
+    padding: 20vh;
+    border-bottom: 2px solid lightseagreen;
+
 }
 
 .whats {
     position: absolute;
-    bottom: 35vh;
+    bottom: 32vh;
     left: 92vw;
 
+
+
+}
+
+.whats:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
 }
 
 .whats img {
     width: 60px;
     height: 60px;
+
 }
 
+
+
 .linkcursos {
+
     text-align: center;
     background-color: black;
     padding: 10px 50px;
@@ -112,15 +123,16 @@
     align-items: center;
     margin-top: 25px;
     font-family: 'Poppins', sans-serif;
-
 }
-
 
 
 .linkcursos:hover {
-    background-color: grey;
+    background-color: lightseagreen;
     color: white;
+    transform: scale(1.05);
+    transition: 0.2s;
 }
+
 
 .ancora {
     color: white;
@@ -128,6 +140,7 @@
 }
 
 .bloco2 {
+
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -167,7 +180,6 @@
     grid-template-rows: 1fr;
     justify-content: center;
 
-
 }
 
 .depoimentos {
@@ -195,6 +207,7 @@
     width: 200px;
     grid-column: 1/2;
     grid-row: 2/3;
+    
 
 }
 
@@ -230,16 +243,20 @@ footer {
     background-color: var(--laranja);
     justify-content: space-evenly;
     padding-bottom: 20px;
+    border-top: 2px solid lightseagreen;
+
 }
 
 .logotipo {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 40px;
 }
 
-.mapa {
-    margin-bottom: 15px;
+iframe {
 
+    height: 30vh;
+    width: 25vw;
+    margin-top: -4em;
 }
 
 .endereco {
@@ -249,8 +266,12 @@ footer {
 
 }
 
+.endereco h4 {
+    margin-bottom: 3em;
+}
+
 .links2 {
-    padding-top: 60px;
+    padding-top: 7em;
 }
 
 .link {
@@ -264,18 +285,57 @@ footer {
     font-family: 'Open Sans';
 }
 
+.ul-footer a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: lightseagreen;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.ul-footer a:hover::after {
+    width: 40%;
+}
+
+.ul-footer li:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+
+.ul-footer a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    text-decoration: none;
+
+}
+
+
 .sociais {
-    padding-top: 60px;
+
+    padding-top: 7em;
     font-family: 'Poppins';
+    
+}
+
+.sociais img:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+   
 }
 
 .redes {
+    text-align: center;
     padding-bottom: 30px;
 
 }
 
 .links3 {
-    padding: 60px;
+    padding-top: 7em;
 }
 
 .area {
@@ -284,10 +344,44 @@ footer {
     font-family: 'Poppins';
 }
 
+.sociais img {
+    margin: 5px;
+}
+
+.links3 a {
+
+    display: flex;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.links3 a::after {
+    content: " ";
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    background-color: lightseagreen;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+
+}
+
+.links3 li:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.links3 a:hover::after {
+    width: 50%;
+}
+
 .links3 ul {
     list-style-type: none;
     line-height: 2;
     font-family: 'Open Sans';
+
 }
 
 .rua {
@@ -310,7 +404,8 @@ footer {
     grid-template-columns: 3, 1fr;
     grid-template-rows: 2, 1fr;
     align-items: center;
-    
+    flex-direction: column;
+
 }
 
 .html h1 {
@@ -320,6 +415,7 @@ footer {
 
 .html p {
     font-family: 'Open Sans';
+    margin: 0 5px;
 }
 
 .java h1 {
@@ -327,6 +423,7 @@ footer {
 }
 
 .java p {
+    margin: 0 5px;
     font-family: 'Open Sans';
 }
 
@@ -335,6 +432,7 @@ footer {
 }
 
 .apis p {
+    margin: 0 5px;
     font-family: 'Open Sans';
 }
 
@@ -343,8 +441,10 @@ footer {
     background-color: aliceblue;
     border-radius: 10px;
     grid-column: 1/2;
-    grid-row:1/2;
+    grid-row: 1/2;
     width: 200px;
+    box-shadow: 1px 1px 10px #4f4b01;
+    
 }
 
 .java {
@@ -354,6 +454,7 @@ footer {
     grid-column: 2/3;
     grid-row: 1/2;
     width: 200px;
+    box-shadow: 1px 1px 10px #4f4b01;
 
 }
 
@@ -362,36 +463,46 @@ footer {
     background-color: aliceblue;
     border-radius: 10px;
     grid-column: 3/4;
-    grid-row:1/2;
+    grid-row: 1/2;
     width: 200px;
+    box-shadow: 1px 1px 10px #4f4b01;
 }
 
 .quero {
-    
+
     background-color: var(--laranja);
     text-align: center;
-   
+
     color: white;
     font-family: 'Poppins';
-    grid-column: 1/4;
-    grid-row: 2/3;
+    padding-bottom: 8vh;
 
 
 }
 
 .link-quero {
+    text-align: center;
     background-color: black;
-    color: white;
-    border-radius: 10px;
-    padding: 0.5vh;
-    padding-right: 2vh;
-    padding-left: 2vh;
-    text-decoration: none;
+    padding: 5px 50px;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 1px 1px 10px rgb(106, 80, 4) ;
 }
 
 .link-quero:hover {
-    background-color: gray;
+    
+    background-color: lightseagreen;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.2s;
 
+}
+
+.quero a{
+    text-decoration: none;
+    color: white;
 }
 
 .bloco-2 {
@@ -429,6 +540,7 @@ footer {
 
 .html-1 p {
     font-family: 'Open Sans';
+    
 }
 
 
@@ -489,7 +601,7 @@ footer {
     position: absolute;
     bottom: 35vh;
     left: 92vw;
-    
+
 }
 
 .whats-c img {
@@ -498,7 +610,13 @@ footer {
 
 }
 
+.whats-c:hover{
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
 /*----------------------------------------------*/
+/* tela de contatos */
 
 .cadastros {
     display: flex;
@@ -517,6 +635,7 @@ footer {
     padding: 2vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    width: 20em;
 }
 
 form h1 {
@@ -533,27 +652,407 @@ form h1 {
 .inputs {
     border: 1px solid;
     border-radius: 5px;
-    padding: 0.5vh 7vw;
+    padding: 0.5vh;
+    width: 19.3rem;
 
 }
 
 #mensagem {
     border-radius: 5px;
-    padding: 6vh 7.2vw;
+    padding: 6vh;
+    width: 13rem;
 }
 
 .botao {
     text-align: center;
     padding-top: 2vw;
     margin-bottom: 10px;
+    
 }
 
 .botao-s {
     background-color: var(--laranja);
     border: none;
     padding: 1vh;
-    padding-left: 9vw;
-    padding-right: 9vw;
     border-radius: 5px;
     font-family: 'Poppins';
+    width: 13rem;
+    box-shadow: 0.5px 0.1px 6px #4f4b01;
+}
+
+/* //------------------------------------------------------// */
+
+/* tela adm */
+.adm {
+    display: flex;
+    height: 60vh;
+}
+
+.menu-le {
+    display: flex;
+    background-color: black;
+    width: 20vw;
+    height: 60vh;
+    text-align: justify;
+    justify-content: center;
+    line-height: 8vh;
+
+}
+
+.ulzinha {
+
+    padding-top: 5vh;
+
+}
+
+.ulzinha a {
+
+    text-decoration: none;
+}
+
+.ulzinha li::after {
+    display: flex;
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: lightseagreen;
+    position: fixed;
+    transition: 0.4s ease-in-out;
+
+}
+
+.ulzinha li:hover::after {
+    width: 100%;
+    margin-bottom: 2.5vh;
+}
+
+.ulzinha li:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.ulzinha li {
+    list-style: none;
+    color: white;
+}
+
+.listinha {
+    font-family: 'Poppins';
+}
+
+
+
+#blocos-full {
+    display:grid;
+    justify-content: center;
+    background-color: var(--laranja);
+    width: 100vw;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+#meu-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap:15px;
+    align-items: center;
+
+}
+
+
+
+#estilo-cards{
+    display: grid;
+    justify-content: center;
+    text-align: start;
+    background-color: white;
+    width: 200px;
+    height:200px;
+    color:black;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 5px #4f4b01;
+    
+   
+}
+    
+#estilo-cards b{
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+
+#estilo-cards p{
+    font-family: 'Open Sans';
+    font-size: 0.9rem;
+}
+
+#estilo-cards h3{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 1.5rem;
+}
+    
+
+
+.busca {
+display: flex;
+justify-content: center;
+margin-top: 4vh;
+
+}
+
+input {
+
+    font-family: 'Poppins';
+    padding: 0.5em 5em;
+
+}
+
+
+
+.botaozinho {
+
+    border-radius: 0 5px 5px 0;
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    font-family: 'Poppins';
+}
+
+/*//--------------------------------------------// */
+
+/* tela matriculas */
+
+.container2 {
+    display: flex;
+    width: 100%;
+    background-color: var(--laranja);
+
+
+}
+
+.formulario h2 {
+    font-family: 'Poppins';
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+
+.formulario input {
+    border-radius: 5px;
+    border: none;
+    padding: 0.6em 4em;
+
+
+
+}
+
+.m-button button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 7em;
+    margin-top: 2em;
+}
+
+.m-nome h2 {
+    padding-bottom: 2vh;
+}
+
+.m-nome label {
+    display: flex;
+    font-family: 'Poppins';
+
+}
+
+.m-cursos label {
+    display: flex;
+    font-family: 'Poppins';
+}
+
+.m-turmas label {
+    display: flex;
+    font-family: 'Poppins';
+}
+
+.m-parcelas label {
+    display: flex;
+    font-family: 'Poppins';
+}
+
+.aluno-matriculado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 18em;
+
+}
+
+.aluno-matriculado li {
+    list-style: none;
+    text-align: left;
+
+}
+
+.aluno-matriculado h2 {
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: 'Poppins';
+    margin-left: 8.3rem;
+
+}
+
+.aluno-matriculado img {
+    width: 30px;
+    margin-left: 0.3rem;
+}
+
+/* //------------------------------------------------------//
+financeiro aluno */
+
+.f-container {
+    display: flex;
+    background-color: var(--laranja);
+    width: 100%;
+}
+
+.f-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 60%;
+}
+
+.f-formulario h2 {
+    margin-bottom: 2vh;
+    font-family: 'Poppins';
+
+
+}
+
+.f-cursos label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+}
+
+.f-cursos p {
+    margin-top: 0.6vh;
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+}
+
+
+.f-cursos input {
+    border-radius: 5px;
+    border: none;
+}
+
+.f-parcelas {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+}
+
+.f-parcelas input {
+    border: none;
+    border-radius: 5px;
+}
+
+.f-botao button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 0.7vh 7.7rem;
+    margin-top: 9px;
+}
+
+.f-cursos {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.f-valor {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5vw;
+}
+
+.f-valor h3 {
+    font-family: 'Poppins';
+}
+
+.f-valor p {
+    font-family: 'Open Sans';
+}
+
+.f-relatorios {
+    display: flex;
+    margin-top: 11vh;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.f-alunos h2 {
+    font-family: 'Poppins';
+}
+
+.f-relat label {
+    font-family: 'Poppins';
+    display: flex;
+}
+
+.f-relat input {
+    border: none;
+    border-radius: 5px;
+}
+
+.f-buscar button {
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 0.7vh 8.2rem;
+    margin-top: 20px;
+}
+
+.f-lista ul {
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.f-relat h2 {
+    margin-bottom: 2.6vh;
+}
+
+.f-lista {
+    margin-top: 5vh;
+    font-family: 'Open Sans';
+}
+
+#relatorio{
+    padding-top: 3vh;
+    font-family: 'Open Sans';
+    line-height: 2.2vh;
+    font-size: 1.2rem;
 }

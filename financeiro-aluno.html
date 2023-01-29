@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adm</title>
-    <script src="./projeto_web_resisado.js" defer ></script>
+    <script src="projeto_web_resisado.js" defer ></script>
+    <title>Finceiro aluno</title>
+
     <link rel="stylesheet" href="novostyle.css">
 </head>
 
@@ -21,7 +22,6 @@
             <a href="adm.html">Adm</a>
         </nav>
     </header>
-
     <main>
         <div class="adm">
             <section class="menu-le">
@@ -39,25 +39,55 @@
                     </ul>
                 </div>
             </section>
+            <section class="f-container">
+                <div class="f-formulario">
+                    <div class="f-cursos">
+                        <h2>Financeiro</h2>
+                        <label>Cursos</label>
+                        <input id="input-curso" type="text">
+                        <a onclick="adiconarCarrinho()" href="#">
+                            <p>Adicionar curso</p>
+                        </a>
+                    </div>
+                    <div class="f-parcelas">
+                        <label>Número de parcelas</label>
+                        <input id="f-nParcelas" type="text">
+                    </div>
+                    <div class="f-botao">
+                        <button onclick="parcelarCurso()">Ver valor</button>
+                    </div>
+                    <div class="f-valor">
 
-            <section id="blocos-full">
-                
-                <div class="busca">
-                    <input id="inputTurma"  type="text" placeholder="Digite o nome da turma">
 
-                    <button class="botaozinho" id="buscar" onclick="buscarTurma()">Buscar</button>
+                        <span id="t-cursos">
+
+                        </span>
+
+                        <span id="t-desconto"></span>
+
+                    </div>
                 </div>
-                <section  id="meu-container">
 
+
+                <section class="f-relatorios">
+                    <div class=" f-alunos">
+                        <div class="f-relat">
+                            <h2>Relatorio aluno</h2>
+                            <label>Nome</label>
+                            <input class="input-relatorio" id="input-relatorio" type="text" ">
+                        </div>
+                        
+                        <div class=" f-buscar">
+                            <button onclick="buscarEstudante()">Buscar</button>
+                        </div>
+
+                        <div id="f-lista">
+
+                        </div>
+                    </div>
                 </section>
-               
-               
-
             </section>
-
-
         </div>
-
         <footer>
             <div class="logo-mapa-rua">
                 <div class="logotipo">
@@ -121,16 +151,17 @@
             <div class="links3">
                 <h3 class="area">Área restrita</h3>
                 <ul>
-                <a href="#">
-                    <li>Área administrativa</li>
-                </a>
-                <a href="#">
-                    <li>Espaço do aluno</li>
-                </a>
-            </ul>
+                    <a href="#">
+                        <li>Área administrativa</li>
+                    </a>
+                    <a href="#">
+                        <li>Espaço do aluno</li>
+                    </a>
+                </ul>
             </div>
         </footer>
     </main>
+    
 </body>
 
 </html>
