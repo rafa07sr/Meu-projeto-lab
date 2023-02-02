@@ -1,5 +1,6 @@
 
 
+
 //---projeto web---//
 
 //---resisado---//    
@@ -191,27 +192,9 @@ const buscarCurso = (nomeCurso) => {
     return localizaCurso
 }
 
-//console.log(buscarCurso("html e css")) 
+console.log(buscarCurso("html e css")) 
 //---------------------------------------------------------------------------------------//
-
-
-const carrinhoCursos = []
-
-function adiconarCarrinho() {
-
-    const nome = document.getElementById("input-curso").value
-    const addCarrinho = buscarCurso(nome)
-    carrinhoCursos.push(addCarrinho.valor)
-    let resultado = document.getElementById("t-cursos") 
-  
-        if(resultado.innerHTML.includes(nome)){
-            alert("Curso já adicionado ao carrinho")
-        }else{
-            resultado.innerHTML += nome + `<p></p>`
-        }
-}
-
-    //return carrinhoCursos
+//return carrinhoCursos
 /* adiconarCarrinho("APIsRest")
 adiconarCarrinho("JavaScript")
 adiconarCarrinho("HTML e CSS") */
@@ -221,12 +204,30 @@ adiconarCarrinho("HTML e CSS") */
 //return carrinhoCursos 
 
 
+const carrinhoCursos = []
+
+function adiconarCarrinho() {
+
+    const nome = document.getElementById("input-curso").value
+    const addCarrinho = buscarCurso(nome)
+
+    carrinhoCursos.push(addCarrinho.valor)
+    let resultado = document.getElementById("t-cursos")
+
+    if (resultado.innerHTML.includes(nome)) {
+        alert("Curso já adicionado ao carrinho")
+    } else {
+        resultado.innerHTML += nome + `<p></p>`
+    }
+
+    document.getElementById("input-curso").value = ""
+
+    
+
+}
 
 
 //-------------------------------------------------------
-
-
-
 //------------------------------------------------------------------------------
 
 
@@ -236,13 +237,13 @@ let descontos = 0
 let valorTotalCursos = 0
 let parcelasCurso = 0
 
-function parcelarCurso  ()  {
-    console.log("cheguei")
+function parcelarCurso() {
+    //console.log("cheguei")
 
-    const numeroDeParcelas = +document.getElementById("f-nParcelas").value
+    const numeroDeParcelas = + document.getElementById("f-nParcelas").value
     const fDesconto = document.getElementById("t-desconto")
-    fDesconto.innerHTML = ""
-    
+     fDesconto.innerHTML = ""
+
     switch (carrinhoCursos.length) {
         case 3:
             descontos = 0.15
@@ -259,8 +260,11 @@ function parcelarCurso  ()  {
     for (let index of carrinhoCursos) {
         valorTotalCursos += index
     }
+    
     //}
-    //--------------------------------------------------------------------------------------//
+    //
+    //--------------------------------------------------------------------------------------/
+    //fDesconto.innerHTML = ""
 
     if (carrinhoCursos === 3 && numeroDeParcelas >= 1 && numeroDeParcelas <= 2) {
         descontos += 0.20
@@ -281,31 +285,40 @@ function parcelarCurso  ()  {
         valorTotalCursos -= (valorTotalCursos * descontos)
         parcelasCurso = valorTotalCursos / numeroDeParcelas
 
-        fDesconto.innerHTML =`O curso ficou no valor de  ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)} e foi concedido um desconto de ${descontos * 100}%`
+        fDesconto.innerHTML = `O curso ficou no valor de  ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)} e foi concedido um desconto de ${descontos * 100}%`
 
 
     } else if (carrinhoCursos === 3 && numeroDeParcelas >= 3) {
 
         valorTotalCursos -= (valorTotalCursos * descontos)
         parcelasCurso = valorTotalCursos / numeroDeParcelas
-        fDesconto.innerHTML =`o valor do curso é de ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)} e foi concedido um desconto de ${descontos * 100}%`
+        fDesconto.innerHTML = `o valor do curso é de ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)} e foi concedido um desconto de ${descontos * 100}%`
 
     } else if (carrinhoCursos === 2 && numeroDeParcelas >= 3) {
         descontos = 0.10
         valorTotalCursos -= (valorTotalCursos * descontos)
         parcelasCurso = valorTotalCursos / numeroDeParcelas
-        fDesconto.innerHTML =`o valor do curso é de ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)} e foi concedido um desconto de ${descontos * 100}%`
+        fDesconto.innerHTML = `o valor do curso é de ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)} e foi concedido um desconto de ${descontos * 100}%`
 
     } else {
         valorTotalCursos = valorTotalCursos
         parcelasCurso = valorTotalCursos / numeroDeParcelas
-        fDesconto.innerHTML =`o valor do curso é de ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)}`
+        fDesconto.innerHTML = `o valor do curso é de ${valorTotalCursos.toFixed(2)} em ${numeroDeParcelas}x de ${parcelasCurso.toFixed(2)}`
 
 
+
+        
     }
-    console.log("terminei")
+    document.getElementById("f-nParcelas").value = ""
 }
-//parcelarCurso(2, 2)
+
+
+
+
+
+
+
+//parcelarCurso()
 //----------------------------------------------------------------------------------------//
 
 //adicionando os valores no carrinhoCursos automaticamente com funções de callback
@@ -441,7 +454,7 @@ const buscarEstudante = () => {
 }
 
 const relatorio = (buscador) => {
-    return buscador = buscador.map((randon) => {
+    return buscador = buscador.map(randon => {
         return (`
             <section id="relatorio">
                 
@@ -514,7 +527,7 @@ const btnMatricutar = () => {
             <li>Turma: ${mTurma}</li>
         </ul>`
 
-    console.log(novaMatricula)
+    // console.log(novaMatricula)
 
 }
 
