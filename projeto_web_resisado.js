@@ -192,7 +192,7 @@ const buscarCurso = (nomeCurso) => {
     return localizaCurso
 }
 
-console.log(buscarCurso("html e css")) 
+//console.log(buscarCurso("html e css")) 
 //---------------------------------------------------------------------------------------//
 //return carrinhoCursos
 /* adiconarCarrinho("APIsRest")
