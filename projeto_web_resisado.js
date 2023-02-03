@@ -222,7 +222,7 @@ function adiconarCarrinho() {
 
     document.getElementById("input-curso").value = ""
 
-    
+
 
 }
 
@@ -242,7 +242,7 @@ function parcelarCurso() {
 
     const numeroDeParcelas = + document.getElementById("f-nParcelas").value
     const fDesconto = document.getElementById("t-desconto")
-     fDesconto.innerHTML = ""
+    fDesconto.innerHTML = ""
 
     switch (carrinhoCursos.length) {
         case 3:
@@ -260,7 +260,7 @@ function parcelarCurso() {
     for (let index of carrinhoCursos) {
         valorTotalCursos += index
     }
-    
+
     //}
     //
     //--------------------------------------------------------------------------------------/
@@ -307,7 +307,7 @@ function parcelarCurso() {
 
 
 
-        
+
     }
     document.getElementById("f-nParcelas").value = ""
 }
